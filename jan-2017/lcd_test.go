@@ -19,7 +19,7 @@ func Test_Numerals(t *testing.T) {
 
 	for k, v := range lcd {
 		if got := printDigit(k); got != v {
-			t.Errorf("Incorrect output: got '%v' expected '%v'", got, v)
+			t.Errorf("Incorrect output: input was '%v' got '%v' expected '%v'", v, got, v)
 		}
 	}
 
@@ -29,6 +29,6 @@ func Test_Multiple_Digits(t *testing.T) {
 	fortytwo := "... ._.\n|_| ._|\n..| |_."
 
 	if got := printDigit(42); got != fortytwo {
-		t.Errorf("Incorrect output: got '%v' expected '%v'", got, fortytwo)
+		t.Errorf("Incorrect output: input was '%v' got '%v' expected '%v'", fortytwo, got, fortytwo)
 	}
 }
